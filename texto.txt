@@ -1,3 +1,26 @@
 Hola
 Esta es la segunda linea
-Adios
+AdiosOn branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+commit a5a55d4d35a65f56cce7bfcea5931bee7839f238
+Author: sandra <72sandraloga.gmail.com>
+Date:   Mon Sep 28 20:20:00 2015 +0200
+
+    Archivo texto.txt creado
+
+commit 3a3829f3162981eda7fa31e914c215442d1122f2
+Author: sandra <72sandraloga@gmaail.com>
+Date:   Mon Sep 28 11:55:37 2015 +0200
+
+     Añadido dni , edad y ciudad
+
+commit 9f6db9ec76c9653bb84eaaa5d4efc5d673c800dd
+Author: Sandra <12@gmail.com>
+Date:   Mon Sep 28 11:45:01 2015 +0200
+
+    Archivo prueba.txt creado
+a5a55d4 Archivo texto.txt creado
+3a3829f  Añadido dni , edad y ciudad
+9f6db9e Archivo prueba.txt creado
