@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ClockDisplay()
+comment0.text=\r\n\ crea\ un\ bojeto\ de\ la\ clase\ ClockDisplay\r\n
+comment1.params=hora\ min
+comment1.target=void\ setHora(int,\ int)
+comment1.text=\r\n\ Introducir\ una\ hora\ desde\ 00\:00\ hasta\ 23\:59\r\n
+comment2.params=
+comment2.target=void\ TimeTick()
+comment2.text=\r\n\ Creado\ metodo\ para\ aumentar\ minuto\ a\ minuto,\ si\ las\ horas\ fuesen\ 24\ \r\n\ se\ pondrian\ a\ 0\ y\ si\ los\ minutos\ llegaran\ a\ 59\ pasan\ a\ ser\ 0\ y\ se\ suma\ 1\ hora\r\n
+comment3.params=
+comment3.target=java.lang.String\ getTime()
+comment3.text=\r\n\ \ Devuelve\ una\ cadena\ de\ 5\ caracteres\ mostrando\ la\r\n\ \ hora\ separada\ de\ los\ minutos\ mediante\ dos\ puntos.\r\n
+numComments=4

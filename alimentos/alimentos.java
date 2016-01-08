@@ -13,7 +13,7 @@ public class alimentos
     private float  carbo;
     private float grasas;
     private float calorias;
-    
+    private String mayorValor;
    
 
     /**
@@ -40,30 +40,7 @@ public class alimentos
         calorias = (proteinas*4) + (carbo*4) + (grasas*9);
         return calorias;
     }
-     /**
-      * Metodo para comprobar el o los nutrientes maayoritarios
-      */
-     public String getNutrienteMayor()
-     {
-       if (proteinas > carbo)
-        {
-          if (proteinas > grasas)
-          {
-              return "Proteinas " + proteinas;
-          }
-          else
-           {
-            if (carbo > grasas)
-              {
-                 return "Carbohidratos" + carbo;
-              }
-            else
-              {
-                  return "Grasas" + grasas;
-              }
-           }
-         }
-     }
+    
 
     
     /**
@@ -71,11 +48,47 @@ public class alimentos
      */
     public void mostrarDatos()
     {
-        System.out.println ("Nombre:                           " + nombre);
-        System.out.println ("Proteinas por cada 100 gramos:    " + proteinas);
-        System.out.println ("Carbohidratos por cada 100 gramos: " + carbo);
-        System.out.println ("Grasas por cada 100 gramos:        " + grasas);
-        System.out.println ("Calorias:                          " + calorias);
-        System.out.println ("Componete/s mayoritario/s          " + getNutrienteMayor());
-      }
+         System.out.println ("Nombre                           :" +  nombre ) ;
+        System.out.println ("Proteínas por cada 100 gramos     :" +  proteinas ) ;
+        System.out.println ("Carbohidratos por cada 100 gramos :" +  carbo ) ;
+        System.out.println ("Grasas por cada 100 gramos        :"+  grasas ) ;
+        if (proteinas >=0 && proteinas<=100 && carbo>=0&& carbo<=100 && grasas>=0 && grasas <=100)
+        {
+
+            if (proteinas > carbo && proteinas > grasas)
+            {
+                mayorValor =  " proteinas";
+            }
+            else if (carbo > proteinas && carbo > grasas)
+            {
+               mayorValor = "carbohidratos" ;
+            }
+            else if(grasas > carbo && grasas > proteinas)
+            {
+                mayorValor =  "grasas";
+            }
+            else if(proteinas == carbo && proteinas != grasas && proteinas > grasas )
+            {
+                mayorValor =  "proteínas y carbohidratos";
+            }
+            else if(proteinas == grasas && proteinas != carbo && proteinas > carbo )
+            {
+                mayorValor =  "proteínas y grasas";
+            }
+            else if(carbo == grasas && proteinas != carbo && proteinas <carbo )
+            {
+                mayorValor =  "carbohidratos y grasas";
+            }
+        }
+        else
+        {
+            System.out.println ("El macronutriente no es válido "  ) ;
+        }
+        System.out.println ("El macronutriente mayoritario es  " +  mayorValor ) ;
+        calorias = (proteinas*4) + (carbo*4) + (grasas*9);
+        System.out.println ("Las calorias totales son  " +  calorias ) ;
+    }
 }
+
+      
+
