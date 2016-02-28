@@ -74,11 +74,9 @@ public class ArrayListInt
      */
     public void clear()
     {
-        //blucle que recorre el array e introduce  0 en todas las posiciones
-    for (int index = 0 ; index < numeros.length ; index++)
-    {
-        numeros[index] = 0;
-    }
+       
+        numeros = new int[0];
+        
     }
     /**
      * devuelve true si la colección contiene ese elemento, false en cualquier otro caso.
