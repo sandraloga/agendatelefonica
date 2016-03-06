@@ -23,7 +23,7 @@ public class AgendaTelefonica
      * Permite almacenar un nuevo número en la agenda indicando el nombre del contacto
      * y su numero de telefono asociado
      */
-    public void enterNumber(String name, String number)
+    public void put(String name, String number)
     {
         agenda.put(name,number);
     }
@@ -46,9 +46,16 @@ public class AgendaTelefonica
     /**
      * comprueba si una determinada clave ya existe en un objeto de tipo HashMap
      */
-    public boolean compuebaClave(String key)
+    public boolean containsKey(String key)
     {
         return agenda.containsKey(key);
+    }
+    /**
+     * comprueba q contiene un valor dado
+     */
+    public boolean containsValue(String value)
+    {
+        return agenda.containsValue(value);
     }
     /** 
      * Print all keys
@@ -57,6 +64,20 @@ public class AgendaTelefonica
     {
         System.out.println( agenda.keySet());
     }
-
+    /**
+     * comprueba si esta vacio
+     */
+    
+    public boolean estaVacio() {
+        return agenda.isEmpty();
+        
+    }
+    /**
+     * vacia el hashMap
+     */
+    public void clear()
+    {
+        agenda.clear();
+    }
 }
 

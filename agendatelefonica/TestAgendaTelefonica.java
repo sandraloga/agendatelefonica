@@ -16,32 +16,32 @@ public class TestAgendaTelefonica
     public TestAgendaTelefonica()
     {
         numeroTestsFallados=0;
-        AgendaTelefonica  map = new AgendaTelefonica();
+        AgendaTelefonica map = new AgendaTelefonica();
         
-       
-        numeroTestsFallados += testea(0,map.size(), "size()");
-        numeroTestsFallados += testea(true, map.isEmpty(), "isEmpty()");
+        numeroTestsFallados += testea(0,map.tamaño(), "tamaño()");
+        numeroTestsFallados += testea(true, map.estaVacio(), ".estaVacio()");
         map.clear();
-        numeroTestsFallados += testea(0, map.size(), "clear()");
+        numeroTestsFallados += testea(0, map.tamaño(), "clear()");
         
         //añadir datos
         map.put("1","1");
         map.put("3","3");
-        numeroTestsFallados += testea(1, map.get(0), "put(String,Sting)");
-        numeroTestsFallados += testea(3, map.get(1), "put(String,String");
         
-        numeroTestsFallados += testea(2, map.size(), "size()");    
-        numeroTestsFallados += testea(false, map.isEmpty(), "isEmpty()");
+        numeroTestsFallados += testea("1", map.lookupNumber("1"), "put(String,String)");
+        numeroTestsFallados += testea("3", map.lookupNumber("3"), "put(String,String");
+        
+        numeroTestsFallados += testea(2, map.tamaño(), "size()");    
+        numeroTestsFallados += testea(false, map.estaVacio(), "isEmpty()");
         
         map.clear();
-        numeroTestsFallados += testea(0, map.size(), "clear()");
+        numeroTestsFallados += testea(0, map.tamaño(), "clear()");
         
         //si contiene un valor dado
-
+        for (int i=0 ; i<10 ; i++)
         {
-            map.put("i", "i");
+            map.put(Integer.toString(i), Integer.toString(i));
         }
-         numeroTestsFallados += testea(10, map.size(), "size()"); 
+         numeroTestsFallados += testea(10, map.tamaño(), "size()"); 
         
         numeroTestsFallados += testea(true, map.containsKey("5"), "containsKey(String)");
         numeroTestsFallados += testea(true, map.containsValue("5"), "containsValue(String)");
