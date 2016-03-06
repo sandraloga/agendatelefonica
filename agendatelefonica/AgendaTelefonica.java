@@ -36,4 +36,27 @@ public class AgendaTelefonica
     {
         return agenda.get(name);
     }
+    /**
+     * devueelv el tamaño del objeto HashMap
+     */
+    public int tamaño()
+    {
+        return agenda.size();
+    }
+    /**
+     * comprueba si una determinada clave ya existe en un objeto de tipo HashMap
+     */
+    public boolean compuebaClave(String key)
+    {
+        return agenda.containsKey(key);
+    }
+    /** 
+     * Print all keys
+     */
+    public void printAllNames()
+    {
+        System.out.println( agenda.keySet());
+    }
+
 }
+
